@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    
+    @State var playerCard = "card5"
+    @State var cpuCard = "card9"
+    @State var playerScore = 0
+    @State var cpuScore = 0
+    
+    @State var bgColor = Color(hue: GetTime(), saturation: 1, brightness: 0.75)
     var body: some View {
         ZStack {
             ContainerRelativeShape()
-                .fill(Color.green.gradient)
+                .fill(bgColor.gradient)
+//                .fill(Color.purple.gradient)
                 .ignoresSafeArea()
             VStack {
                 Image("war")
@@ -23,22 +30,45 @@ struct ContentView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Image("card3")
+                    Image(playerCard)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 120)
                     Spacer()
-                    Image("card4")
+                    Image(cpuCard)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 120)
                     Spacer()
                 }
                 Spacer()
-                Image("deal")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 150)
+                Button {
+                    bgColor = Color(hue: GetTime(), saturation: 1, brightness: 0.75)
+                    // Generate a random number between 2 and 14
+                    let playerRand = Int.random(in: 2...14)
+                    let cpuRand = Int.random(in: 2...14)
+                    // Update the cards
+                    playerCard = "card" + String(playerRand)
+                    cpuCard = "card" + String(cpuRand)
+                    // Update the scores
+                    if playerRand > cpuRand {
+                        playerScore += 1
+                    }
+                    if playerRand < cpuRand {
+                        cpuScore += 1
+                    }
+                    if playerRand == cpuRand {
+                        playerScore += 1
+                        cpuScore += 1
+                    }
+                } label: {
+                    Image("deal")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 150)
+                }
+
+
                 Spacer()
                 HStack {
                     Spacer()
@@ -47,7 +77,7 @@ struct ContentView: View {
                             .font(.headline)
                             .foregroundColor(Color.white)
                             .padding(/*@START_MENU_TOKEN@*/.bottom, 10.0/*@END_MENU_TOKEN@*/)
-                        Text("0")
+                        Text(String(playerScore))
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                     }
@@ -57,7 +87,7 @@ struct ContentView: View {
                             .font(.headline)
                             .foregroundColor(Color.white)
                             .padding(/*@START_MENU_TOKEN@*/.bottom, 10.0/*@END_MENU_TOKEN@*/)
-                        Text("0")
+                        Text(String(cpuScore))
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                     }

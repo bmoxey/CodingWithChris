@@ -11,6 +11,7 @@
 		AFB0C7102A7C6123001F86FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0C70F2A7C6123001F86FC /* ContentView.swift */; };
 		AFB0C7122A7C6124001F86FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB0C7112A7C6124001F86FC /* Assets.xcassets */; };
 		AFB0C7152A7C6124001F86FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB0C7142A7C6124001F86FC /* Preview Assets.xcassets */; };
+		AFB0C71E2A7D1CE0001F86FC /* GetTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0C71D2A7D1CE0001F86FC /* GetTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		AFB0C70F2A7C6123001F86FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AFB0C7112A7C6124001F86FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFB0C7142A7C6124001F86FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AFB0C71C2A7D1B56001F86FC /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AFB0C71D2A7D1CE0001F86FC /* GetTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +58,8 @@
 				AFB0C70F2A7C6123001F86FC /* ContentView.swift */,
 				AFB0C7112A7C6124001F86FC /* Assets.xcassets */,
 				AFB0C7132A7C6124001F86FC /* Preview Content */,
+				AFB0C71C2A7D1B56001F86FC /* MyPlayground.playground */,
+				AFB0C71D2A7D1CE0001F86FC /* GetTime.swift */,
 			);
 			path = CodingWithChris;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB0C71E2A7D1CE0001F86FC /* GetTime.swift in Sources */,
 				AFB0C7102A7C6123001F86FC /* ContentView.swift in Sources */,
 				AFB0C70E2A7C6123001F86FC /* CodingWithChrisApp.swift in Sources */,
 			);
